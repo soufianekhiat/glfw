@@ -157,6 +157,7 @@ information on what to include when reporting a bug.
  - [Cocoa] Bugfix: Undecorated windows could not be iconified on recent macOS
  - [Cocoa] Bugfix: Touching event queue from secondary thread before main thread
    would abort (#1649)
+ - [Cocoa] Use `CALayer` instead of `NSView` for `EGLNativeWindowType` (#1169)
  - [X11] Bugfix: The CMake files did not check for the XInput headers (#1480)
  - [X11] Bugfix: Key names were not updated when the keyboard layout changed
    (#1462,#1528)
@@ -176,6 +177,10 @@ information on what to include when reporting a bug.
  - [X11] Bugfix: Xlib errors caused by other parts of the application could be
    reported as GLFW errors
  - [X11] Bugfix: A handle race condition could cause a `BadWindow` error (#1633)
+ - [X11] Bugfix: XKB path used keysyms instead of physical locations for
+   non-printable keys (#1598)
+ - [X11] Bugfix: Function keys were mapped to `GLFW_KEY_UNKNOWN` for some layout
+   combinaitons (#1598)
  - [Wayland] Removed support for `wl_shell` (#1443)
  - [Wayland] Bugfix: The `GLFW_HAND_CURSOR` shape used the wrong image (#1432)
  - [Wayland] Bugfix: `CLOCK_MONOTONIC` was not correctly enabled
@@ -355,6 +360,7 @@ skills.
  - Matt Sealey
  - Steve Sexton
  - Arkady Shapkin
+ - Ali Sherief
  - Yoshiki Shibukawa
  - Dmitri Shuralyov
  - Daniel Skorupski
